@@ -16,7 +16,8 @@ export default function App() {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=0949ee5ea2794a5c941162849240606&q=${city}&aqi=no`);
+        const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
+        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
