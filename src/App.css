@@ -1,4 +1,3 @@
-/* App.css */
 body {
   font-family: Arial, sans-serif;
   background: #1a1a1a;
@@ -28,6 +27,13 @@ body {
   animation: fadeIn 1s ease-in-out;
 }
 
+.error {
+  color: #ff5733;
+  font-size: 1.2em;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
 .weather-box {
   background: #2c2c2c;
   border-radius: 10px;
@@ -38,6 +44,7 @@ body {
   margin: 20px auto;
   color: #f1f1f1;
   animation: slideIn 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .weather-box .temperature,
@@ -114,18 +121,64 @@ body {
   }
 }
 
-.weather-box .temperature {
+.home-container {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  background: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.home-heading {
+  font-size: 2.5em;
+  color: #ff5733;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+.home-subheading, .home-guide {
+  font-size: 1.2em;
+  color: #f1f1f1;
+  margin: 20px 0;
+}
+
+.home-steps {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.step {
+  background: #444;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.step h2 {
+  font-size: 1.5em;
   color: #ffcc33;
 }
 
-.weather-box .wind-speed {
-  color: #33ccff;
+.step p {
+  font-size: 1em;
+  color: #f1f1f1;
 }
 
-.weather-box .humidity {
-  color: #ff6699;
-}
+@media (max-width: 768px) {
+  .home-steps {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.weather-box .wind-direction {
-  color: #66ff66;
+  .step {
+    margin-bottom: 20px;
+  }
+
+  .home-search-bar {
+    width: 80%;
+  }
 }

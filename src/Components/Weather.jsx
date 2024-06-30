@@ -8,19 +8,31 @@ export default function Weather(props) {
       case 'N':
         setWindDirection('North');
         break;
+      case 'NE':
+        setWindDirection('Northeast');
+        break;
       case 'E':
         setWindDirection('East');
         break;
-      case 'W':
-        setWindDirection('West');
+      case 'SE':
+        setWindDirection('Southeast');
         break;
       case 'S':
         setWindDirection('South');
         break;
+      case 'SW':
+        setWindDirection('Southwest');
+        break;
+      case 'W':
+        setWindDirection('West');
+        break;
+      case 'NW':
+        setWindDirection('Northwest');
+        break;
       default:
         setWindDirection('');
     }
-  }, [props.weather.windDirection]);
+  }, []);
 
   return (
     <div className='weather-box'>
